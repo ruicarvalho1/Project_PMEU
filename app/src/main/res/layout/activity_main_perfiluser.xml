@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".Login.PerfilUser.MainActivity_perfiluser">
+
+    <View
+        android:id="@+id/containerUser"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/container_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="@id/containerUser"
+        app:layout_constraintEnd_toEndOf="@id/containerUser"
+        app:layout_constraintTop_toTopOf="@id/containerUser"
+        app:layout_constraintBottom_toBottomOf="@id/containerUser"/>
+
+    <ImageView
+        android:id="@+id/iconeUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_user"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/containerUser"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textNomeUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nelson Freitas"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/containerUser"
+        app:layout_constraintStart_toEndOf="@id/iconeUser"/>
+
+    <ImageView
+        android:id="@+id/iconeEmail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeUser"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textEmailUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nelsonfreitas@ipvc.pt"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/textNomeUsuario"
+        app:layout_constraintStart_toEndOf="@id/iconeEmail"/>
+
+    <ImageView
+        android:id="@+id/iconeNumber"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeEmail"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textNumberUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="27616"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeEmail"
+        app:layout_constraintStart_toEndOf="@id/iconeEmail"/>
+
+    <ImageView
+        android:id="@+id/iconeCurso"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_school_24"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeNumber"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TPSI"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/iconeNumber"
+        app:layout_constraintStart_toEndOf="@id/iconeNumber"/>
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:src="@drawable/ic_baseline_settings_24"
+        android:layout_width="54dp"
+        android:layout_height="47dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="settings"/>
+
+    <ImageButton
+        android:id="@+id/favourites"
+        android:src="@drawable/ic_baseline_favorite_24"
+        android:layout_width="54dp"
+        android:layout_height="47dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="favourites"
+        />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:onClick="logout">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

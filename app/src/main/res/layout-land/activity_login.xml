@@ -93,11 +93,11 @@
                     android:id="@+id/loginBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Login"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/shape_button01"
-                    android:backgroundTint="#FF9800"
-                    android:text="Login"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    />
 
 
             </com.google.android.material.textfield.TextInputLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        tools:text="Ola"
+        android:textStyle="bold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_address"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:text="Ola"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_horario"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:text="Ola"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_rating"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16dp"
+        tools:text="Ola"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</LinearLayout>

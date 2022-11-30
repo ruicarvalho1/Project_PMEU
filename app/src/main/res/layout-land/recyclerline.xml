@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:text="Os Lusíadas"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/library"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:text="Biblioteca: ESE"
+        android:textColor="@color/black"
+        android:layout_below="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:id="@+id/available"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:text="Disponível: Sim"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Button
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/available"
+        android:backgroundTint="@color/orange"
+        android:onClick="info"
+        >
+    </Button>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="6dp">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/pdfRL"
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/black">
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titleTV"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pdfRL"
+            android:text="Titulo do Livro"/>
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:layout_toEndOf="@id/pdfRL">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/autor"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Autor:"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/autortv"
+                    android:layout_weight="1"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:layout_marginEnd="5dp"/>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/categoria"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categoria:"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/categoriatv"
+                    android:layout_weight="1"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:layout_marginEnd="5dp"/>
+
+
+            </TableRow>
+
+
+
+
+            <TableRow
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/opinioes"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opiniões:"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/opinioestv"
+                    android:layout_weight="1"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:layout_marginEnd="5dp"/>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

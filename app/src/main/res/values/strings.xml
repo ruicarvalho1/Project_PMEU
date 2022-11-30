@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Login_Project</string>
+    <string name="rating">Avaliação: %1$.1f</string>
+
+
 </resources>

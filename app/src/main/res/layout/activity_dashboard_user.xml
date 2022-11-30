@@ -6,9 +6,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/back01"
     tools:context=".Login.DashboardUserActivity">
-    
+
+
     
     <RelativeLayout
+
+
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
@@ -20,7 +23,7 @@
           android:layout_height="wrap_content"
           android:layout_marginTop="8dp"
           android:layout_centerHorizontal="true"
-          android:text="Dashboard User"
+          android:text="Dashboard Rui"
           android:textStyle="bold"
           android:textColor="@color/white"/>
 
@@ -30,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/titleTv"
-            android:text="abc@example.com"
+            android:text="rui.carvalho@ipvc.pt"
             android:textColor="@color/white"/>
 
         <ImageButton
@@ -45,70 +48,118 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="5dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp">
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".MainActivity">
 
-        <!--BotÃµes ordenados da esquerda para a direita-->
 
-        <Button
-            android:id="@+id/Funcionlide_1"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_house_24"></Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.106" />
 
-        <Button
-            android:id="@+id/Funcionlide_2"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_library_books_24">
+            android:src="@drawable/escolas"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+            app:layout_constraintVertical_bias="0.507">
+        </ImageView>
 
-        </Button>
-
-        <Button
-            android:id="@+id/Funcionlide_3"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_manage_search_24"></Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.726"
+            />
 
-        <Button
-            android:id="@+id/Funcionlide_4"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/ic_baseline_map_24"></Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+            app:layout_constraintVertical_bias="0.178"></ImageView>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="5dp">
 
+            <!--BotÃµes ordenados da esquerda para a direita-->
+
+            <ImageButton
+                android:id="@+id/Funcionlide_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:onClick="Funcionlide_1"
+                android:src="@drawable/ic_baseline_house_24"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/Funcionlide_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:onClick="Funcionlide_2"
+                android:src="@drawable/ic_baseline_manage_search_24"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/Funcionlide_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:onClick="Funcionlide_3"
+                android:src="@drawable/ic_baseline_map_24"></ImageButton>
+
+            <ImageButton
+                android:id="@+id/Funcionlide_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:onClick="Funcionlide_4"
+                android:src="@drawable/ic_profile">
+
+            </ImageButton>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </RelativeLayout>
