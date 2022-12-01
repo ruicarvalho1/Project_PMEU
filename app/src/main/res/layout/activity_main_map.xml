@@ -4,13 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Login.Mapa.MainActivityM" >
+    tools:context=".Login.Mapa.MainActivityM"
+
+    >
 
     <fragment
         android:id="@+id/map_fragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <!--BotÃµes ordenados da esquerda para a direita-->
+
+        <ImageButton
+            android:id="@+id/Funcionlide_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:onClick="Funcionlide_1"
+            android:src="@drawable/ic_baseline_house_24"></ImageButton>
+
+
+
+        <ImageButton
+            android:id="@+id/Funcionlide_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:onClick="Funcionlide_3"
+            android:src="@drawable/ic_baseline_map_24"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/Funcionlide_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:onClick="Funcionlide_4"
+            android:src="@drawable/ic_profile">
+
+        </ImageButton>
+
+
+    </LinearLayout>
 
 
 </FrameLayout>

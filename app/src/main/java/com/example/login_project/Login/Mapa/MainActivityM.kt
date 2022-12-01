@@ -1,8 +1,12 @@
 package com.example.login_project.Login.Mapa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.core.content.ContextCompat
+import com.example.login_project.Login.DashboardUserActivity
+import com.example.login_project.Login.PerfilUser.MainActivity_perfiluser
 import com.example.login_project.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -48,6 +52,8 @@ class MainActivityM : AppCompatActivity() {
         mapFragment.getMapAsync { googleMap ->
             googleMap.setInfoWindowAdapter(MarkerInfoAdapter(this))
             addMarkers(googleMap)
+
+
 
 
             googleMap.setOnMapLoadedCallback {
@@ -132,6 +138,26 @@ class MainActivityM : AppCompatActivity() {
                 marker.tag = place
             }
         }
+    }
+
+    fun Funcionlide_1(view: View) {
+        val intent = Intent(this, DashboardUserActivity::class.java).apply {
+
+        }
+        startActivity(intent)
+    }
+
+    fun Funcionlide_3(view: View) {
+        val intent = Intent(this, MainActivityM::class.java).apply {
+
+        }
+        startActivity(intent)
+    }
+    fun Funcionlide_4(view: View) {
+        val intent = Intent(this, MainActivity_perfiluser::class.java).apply {
+
+        }
+        startActivity(intent)
     }
 }
 

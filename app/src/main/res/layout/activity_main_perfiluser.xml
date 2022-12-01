@@ -130,27 +130,69 @@
         android:onClick="settings"/>
 
     <ImageButton
-        android:id="@+id/favourites"
-        android:src="@drawable/ic_baseline_favorite_24"
+        android:id="@+id/logoutBtn"
+        android:src="@drawable/ic_logout"
         android:layout_width="54dp"
         android:layout_height="47dp"
         android:background="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="favourites"
+        android:onClick="logoutBtn"
         />
 
-    <Button
-        android:id="@+id/logout"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:backgroundTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="10dp"
-        android:onClick="logout">
-    </Button>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <!--BotÃµes ordenados da esquerda para a direita-->
+
+        <ImageButton
+            android:id="@+id/Funcionlide_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:onClick="Funcionlide_1"
+            android:src="@drawable/ic_baseline_house_24"></ImageButton>
+
+
+
+        <ImageButton
+            android:id="@+id/Funcionlide_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:onClick="Funcionlide_3"
+            android:src="@drawable/ic_baseline_map_24"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/Funcionlide_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:onClick="Funcionlide_4"
+            android:src="@drawable/ic_profile">
+
+        </ImageButton>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

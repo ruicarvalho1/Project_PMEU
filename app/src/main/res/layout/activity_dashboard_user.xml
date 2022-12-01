@@ -36,14 +36,15 @@
             android:text="rui.carvalho@ipvc.pt"
             android:textColor="@color/white"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/logoutBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
+            android:textColor="@color/orange"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_logout"
+            android:text="Logout"
             android:background="@android:color/transparent"/>
 
     </RelativeLayout>
@@ -54,8 +55,17 @@
         app:layoutManager="LinearLayoutManager"
         tools:context=".MainActivity">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/escolas"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view"
+
+            >
+        </ImageView>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="80dp"
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,39 +76,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.106" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/escolas"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-            app:layout_constraintVertical_bias="0.507">
-        </ImageView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.726"
-            />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
-            app:layout_constraintVertical_bias="0.178"></ImageView>
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="5dp">
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
             <!--BotÃµes ordenados da esquerda para a direita-->
 
@@ -115,18 +99,6 @@
                 android:onClick="Funcionlide_1"
                 android:src="@drawable/ic_baseline_house_24"></ImageButton>
 
-            <ImageButton
-                android:id="@+id/Funcionlide_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:onClick="Funcionlide_2"
-                android:src="@drawable/ic_baseline_manage_search_24"></ImageButton>
 
             <ImageButton
                 android:id="@+id/Funcionlide_3"

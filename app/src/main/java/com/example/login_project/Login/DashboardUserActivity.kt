@@ -9,14 +9,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.login_project.Login.Adapter.Horizontal_RecyclerView
-import com.example.login_project.Login.Adapter.Horizontal_RecyclerView2
 import com.example.login_project.Login.Mapa.MainActivityM
 import com.example.login_project.Login.PerfilUser.MainActivity_perfiluser
 import com.example.login_project.Login.Retrofit.api.Endpoints
 import com.example.login_project.Login.Retrofit.api.OutputLivro
-import com.example.login_project.Login.Retrofit.api.OutputUser
 import com.example.login_project.Login.Retrofit.api.ServiceBuilder
-import com.example.login_project.Login.Retrofit.api.User
 import com.example.login_project.R
 import com.example.login_project.databinding.ActivityDashboardUserBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -48,7 +45,7 @@ class DashboardUserActivity : AppCompatActivity() {
 
         binding.logoutBtn.setOnClickListener{
             firebaseAuth.signOut()
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, SplashActivity::class.java))
             finish()
 
         }
@@ -56,7 +53,6 @@ class DashboardUserActivity : AppCompatActivity() {
         val request = ServiceBuilder.buildService(Endpoints::class.java)
         val call = request.getLivros()
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-        val recyclerView2: RecyclerView = findViewById(R.id.recyclerView2)
 
         call.enqueue(object : Callback<OutputLivro> {
             override fun onResponse(call: Call<OutputLivro>, response: Response<OutputLivro>) {
@@ -77,22 +73,7 @@ class DashboardUserActivity : AppCompatActivity() {
 
 
 
-        call.clone().enqueue(object : Callback<OutputLivro> {
-            override fun onResponse(call: Call<OutputLivro>, response: Response<OutputLivro>) {
-                if (response.isSuccessful){
-                    recyclerView2.apply {
-                        setHasFixedSize(true)
-                        layoutManager = LinearLayoutManager(this@DashboardUserActivity,LinearLayoutManager.HORIZONTAL,false)
-                        val i:OutputLivro  = response.body()!!
-                        adapter = Horizontal_RecyclerView2(i.data)
 
-                    }
-                }
-                Log.d("TAG", "sadasd")
-            }
-            override fun onFailure(call: Call<OutputLivro>, t: Throwable) {
-                Toast.makeText(this@DashboardUserActivity, "${t.message}", Toast.LENGTH_SHORT).show() }
-        })
 
 
        /*
@@ -133,11 +114,7 @@ class DashboardUserActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-    fun Funcionlide_2(view: View) {
-        val intent = Intent(this, DashboardUserActivity::class.java).apply {
-        }
-        startActivity(intent)
-    }
+
     fun Funcionlide_3(view: View) {
         val intent = Intent(this, MainActivityM::class.java).apply {
 
@@ -150,6 +127,7 @@ class DashboardUserActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
+
 
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="300dp"
-    android:layout_height="180dp"
+    android:layout_height="600dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp"
     app:cardCornerRadius="5dp"
@@ -10,7 +10,7 @@
     <RelativeLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/pdfRL"
@@ -18,6 +18,8 @@
             android:layout_height="150dp"
             android:layout_marginEnd="5dp"
             android:background="@color/black">
+
+
 
 
         </RelativeLayout>
@@ -38,26 +40,7 @@
             android:layout_below="@id/titleTV"
             android:layout_toEndOf="@id/pdfRL">
 
-            <TableRow>
 
-                <TextView
-                    android:id="@+id/autor"
-                    style="@style/TextAppearance.AppCompat.Caption"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Autor:"
-                    android:layout_marginEnd="5dp"/>
-                <TextView
-                    android:id="@+id/autortv"
-                    android:layout_weight="1"
-                    style="@style/TextAppearance.AppCompat.Caption"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="N/A"
-                    android:layout_marginEnd="5dp"/>
-
-
-            </TableRow>
 
             <TableRow
                 android:layout_marginTop="5dp">
@@ -67,7 +50,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Categoria:"
-                    android:layout_marginEnd="5dp"/>
+                    android:layout_marginEnd="5dp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/categoriatv"
                     android:layout_weight="1"
@@ -88,7 +72,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ISBN:"
-                    android:layout_marginEnd="5dp"/>
+                    android:layout_marginEnd="5dp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/isbntv"
                     android:layout_weight="1"
@@ -97,6 +82,31 @@
                     android:layout_height="wrap_content"
                     android:text="N/A"
                     android:layout_marginEnd="5dp"/>
+
+
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/editora"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editora:"
+                    android:layout_marginEnd="5dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/editoratv"
+                    android:layout_weight="1"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:layout_marginEnd="5dp"
+                    />
 
 
             </TableRow>
@@ -110,7 +120,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Disponibilidade:"
-                    android:layout_marginEnd="5dp"/>
+                    android:layout_marginEnd="5dp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/disponibilidadetv"
                     android:layout_weight="1"
@@ -124,10 +135,94 @@
             </TableRow>
 
 
+
+
         </TableLayout>
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdfRL"
+            android:layout_alignBottom="@+id/pdfRL"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/autor"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="Autor:"
+                    android:textStyle="bold"
+                     />
+
+                <TextView
+                    android:id="@+id/autortv"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:text="N/A" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/sinopse"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="Sinopse:"
+                    android:textStyle="bold"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/sinopsetv"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:text="N/A" />
+
+
+            </TableRow>
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/opinioes"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="Opinioes:"
+                    android:textStyle="bold"  />
+
+                <TextView
+                    android:id="@+id/opinioestv"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:text="N/A" />
+
+
+            </TableRow>
+
+        </TableLayout>
 
     </RelativeLayout>
-
 
 </androidx.cardview.widget.CardView>
