@@ -19,9 +19,13 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_user"
+
+        android:id="@+id/imagemUser"
+        android:layout_width="420px"
+        android:layout_height="420px"
+        android:innerRadius="100dp"
+        android:thicknessRatio="2.0"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@id/containerUser"
         app:layout_constraintEnd_toEndOf="@id/containerUser"
         app:layout_constraintTop_toTopOf="@id/containerUser"
@@ -41,7 +45,7 @@
         android:id="@+id/textNomeUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nelson Freitas"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -54,7 +58,7 @@
         android:id="@+id/iconeEmail"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_email"
+        android:src="@drawable/ic_email1"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@id/iconeUser"
@@ -64,7 +68,7 @@
         android:id="@+id/textEmailUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nelsonfreitas@ipvc.pt"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -87,7 +91,7 @@
         android:id="@+id/textNumberUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="27616"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -110,7 +114,7 @@
         android:id="@+id/textCurso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TPSI"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -131,13 +135,12 @@
 
     <ImageButton
         android:id="@+id/logoutBtn"
-        android:src="@drawable/ic_logout"
+        android:src="@drawable/ic_logout2"
         android:layout_width="54dp"
         android:layout_height="47dp"
         android:background="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="logoutBtn"
         />
 
     <LinearLayout
@@ -161,7 +164,6 @@
             android:layout_weight="1"
             android:onClick="Funcionlide_1"
             android:src="@drawable/ic_baseline_house_24"></ImageButton>
-
 
 
         <ImageButton

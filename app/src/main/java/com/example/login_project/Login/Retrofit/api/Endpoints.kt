@@ -15,6 +15,9 @@ interface Endpoints {
     @GET("api/livro/{id}")
     fun getLivrosByid(@Path("id") id: Int): Call<Livro>
 
+    @GET("api/user/{id}")
+    fun getUserByid(@Path("id") id: Int): Call<OutputUserId>
+
 
 
 }

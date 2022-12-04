@@ -1,10 +1,14 @@
 package com.example.login_project.Login
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.View.OnClickListener
+import android.widget.CheckBox
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -43,12 +47,8 @@ class DashboardUserActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
 
-        binding.logoutBtn.setOnClickListener{
-            firebaseAuth.signOut()
-            startActivity(Intent(this, SplashActivity::class.java))
-            finish()
 
-        }
+
 
         val request = ServiceBuilder.buildService(Endpoints::class.java)
         val call = request.getLivros()
@@ -70,8 +70,6 @@ class DashboardUserActivity : AppCompatActivity() {
             override fun onFailure(call: Call<OutputLivro>, t: Throwable) {
                 Toast.makeText(this@DashboardUserActivity, "${t.message}", Toast.LENGTH_SHORT).show() }
         })
-
-
 
 
 
@@ -103,6 +101,19 @@ class DashboardUserActivity : AppCompatActivity() {
             //set to textview of toolbar
 
             binding.subTitleTv.text=email
+
+        }
+
+    }
+
+
+
+    fun logout(onClickListener: OnClickListener){
+
+        binding.logoutBtn.setOnClickListener{
+            firebaseAuth.signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
 
         }
 

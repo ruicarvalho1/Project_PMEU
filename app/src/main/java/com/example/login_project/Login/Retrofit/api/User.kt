@@ -7,4 +7,5 @@ data class User (
     val email: String,
     val numeroAluno: Int,
     val curso: String,
+    val imageUserUrl: String,
     )
